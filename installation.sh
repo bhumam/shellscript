@@ -14,6 +14,7 @@ exit 1
 else
 echo "install...success"
 fi
+
 dnf install git -y
 if [ $? -ne 0]
 then
