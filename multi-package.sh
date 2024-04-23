@@ -12,10 +12,10 @@ echo "script started executing at $TIMESTAMP"
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-    echo -e "$2 install....$R FAILURE $N"
+    echo -e "$2 ...$R FAILURE $N"
     exit 1
     else
-    echo -e "$2 install...$G SUCCESS $N"
+    echo -e "$2 ...$G SUCCESS $N"
     fi
 }
 if [ $USERID -ne 0 ]
@@ -35,7 +35,7 @@ then
 echo -e " $i already installed..$Y SKIPPING $N"
 else
 dnf install $i -y &>>$LOGFILE
-VALIDATE $? "$i ...$G SUCCESS $N"
+VALIDATE $? "$i INSTALL"
 fi
 done
 
