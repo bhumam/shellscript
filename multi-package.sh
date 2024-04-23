@@ -33,7 +33,7 @@ dnf list installed $i &>>$LOGFILE
 if [ $? -eq 0 ]
 echo -e " $i already installed..$Y SKIPPING $N"
 else
-dnf install $i -y $>>$LOGFILE
-VALIDATE $? "$i install...$G SUCCESS $N"
+dnf install $i -y &>>$LOGFILE
+VALIDATE $? "$i...$G SUCCESS $N"
 fi
 done
