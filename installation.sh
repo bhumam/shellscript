@@ -14,7 +14,7 @@ exit 1
 else
 echo "install...success"
 fi
-dnf install mgit -y
+dnf install git -y
 if [ $? -ne 0]
 then
 echo "install...Fail"
